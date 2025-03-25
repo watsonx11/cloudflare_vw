@@ -1,0 +1,7 @@
+services:
+  cloudflare:
+    image: cloudflare/cloudflared:2025.2.1-arm64
+    container_name: cloudflare_vw
+    restart: always
+    command: 'tunnel --no-autoupdate run --token ${CLOUDFLARED_TOKEN}'
+
